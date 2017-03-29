@@ -34,13 +34,27 @@ typedef unsigned long long ull;
 
 int main()
 {
-   //freopen("in.txt", "r", stdin);
+   //freopen("in1.txt", "r", stdin);
    //freopen("out.txt", "w", stdout);
 
-   int n;
+   long n = 0;
+   long k=0 ;
 
+  
    cin >> n;
-   cout << n;
+   cin >> k;
+
+   long result=0;
+
+   for (int i = 0; i < n; ++i) {
+      int wi;
+      cin >> wi;
+      result += wi / k;
+      if (wi%k != 0) ++result;
+   }
+   
+
+   cout << (result+1)/2;
 
    return 0;
 }
